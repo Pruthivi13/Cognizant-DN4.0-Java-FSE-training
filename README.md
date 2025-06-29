@@ -1,6 +1,5 @@
 # Cognizant DN4.0 Java FSE Training
 
-
 This repository contains a collection of projects and exercises completed as part of the Cognizant DN4.0 Java Full Stack Engineer (FSE) training program. The content is organized by weekly topics and covers fundamental concepts in Java (Algorithms, Data Structures, Design Patterns) and PL/SQL.
 
 ## Week 1: Java Fundamentals
@@ -52,6 +51,35 @@ This section contains a series of PL/SQL scripts demonstrating core database pro
 | **Exercise 5** | **Triggers** | Creating a trigger to automatically log transaction details into an audit table. |
 | **Exercise 6** | **Cursors** | Using a cursor to iterate through all loans and update interest rates based on the loan amount. |
 | **Exercise 7** | **Packages** | Bundling related procedures and functions into a `CustomerManagement` package. |
+
+## Week 2: JUnit and Mockito Exercises
+
+This section contains projects and examples related to Test-Driven Development (TDD) using JUnit 4, JUnit 5, and Mockito frameworks. The content is organized into several Maven projects demonstrating basic to advanced testing techniques and mocking capabilities.
+
+### Projects Overview
+
+| Project | Description |
+|---|---|
+| **junit-example** | Basic JUnit 4 and JUnit 5 test examples demonstrating fundamental testing concepts. |
+| **junit-advance** | Advanced JUnit 5 test examples with code quality tools like Checkstyle and JaCoCo for coverage. |
+| **mockito-demo** | Mockito test examples integrated with JUnit 5, showcasing mocking and verification techniques. |
+| **Logging using SLF4J** | Examples demonstrating logging practices using the SLF4J framework. |
+
+### How to Run the Tests
+
+Each project is a Maven project. To run the tests, navigate to the project directory and use the following commands:
+
+```bash
+# Navigate to the project directory, e.g. junit-example
+cd "Week 2- TDD using JUnit5 and Mockito/junit-example"
+
+# Run tests using Maven
+mvn clean test
+```
+
+This will compile the code and run all tests, showing the results in the console.
+
+---
 
 ## How to Run the Examples
 

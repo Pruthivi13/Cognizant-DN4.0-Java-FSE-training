@@ -79,6 +79,34 @@ mvn clean test
 
 This will compile the code and run all tests, showing the results in the console.
 
+### How to Run the Examples
+
+Each Java project is self-contained. To run an example, navigate to its directory and use the `javac` and `java` commands.
+
+**1. For projects without packages:**
+```bash
+# Navigate to the example directory
+cd "week 1/Week 1- Design Patterns and Principles/BuilderPatternExample/"
+
+# Compile all .java files
+javac *.java
+
+# Run the Main class
+java Main
+```
+
+**2. For projects with packages (inside a `src` directory):**
+```bash
+# Navigate to the root directory containing src
+cd "week 1/Week 1- Design Patterns and Principles/CommandPatternExample/"
+
+# Compile the source files from the root
+javac src/command/*.java
+
+# Run the Main class from the root, using the fully qualified name
+java command.Main
+```
+
 ---
 
 ## How to Run the Examples

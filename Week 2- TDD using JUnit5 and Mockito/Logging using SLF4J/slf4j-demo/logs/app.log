@@ -1,0 +1,1 @@
+21:02:13.937 [com.example.logging.MultipleAppenders.main()] INFO  c.example.logging.MultipleAppenders - Logging to both console and file!

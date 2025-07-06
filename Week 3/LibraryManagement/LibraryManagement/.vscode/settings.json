@@ -1,0 +1,14 @@
+{
+  "xml.validation.enabled": true,
+  "xml.validation.schematron.enabled": false,
+  "xml.validation.suppress": [
+    {
+      "file": "src/main/resources/applicationContext.xml",
+      "errors": [
+        "cvc-elt.1.a"
+      ]
+    }
+],
+"java.compile.nullAnalysis.mode": "automatic",
+"java.configuration.updateBuildConfiguration": "automatic"
+}

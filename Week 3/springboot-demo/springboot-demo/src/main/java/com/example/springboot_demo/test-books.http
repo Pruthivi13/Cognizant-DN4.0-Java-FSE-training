@@ -1,0 +1,28 @@
+### Get all books
+GET http://localhost:8080/books
+
+### Add a new book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "isbn": "9780061122415"
+}
+
+### Get book by ID
+GET http://localhost:8080/books/1
+
+### Update book
+PUT http://localhost:8080/books/1
+Content-Type: application/json
+
+{
+  "title": "The Alchemist - Updated",
+  "author": "Paulo Coelho",
+  "isbn": "9780061122415"
+}
+
+### Delete book
+DELETE http://localhost:8080/books/1

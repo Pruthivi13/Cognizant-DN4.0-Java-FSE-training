@@ -1,0 +1,14 @@
+CREATE OR REPLACE FUNCTION CalculateAge (
+    dob IN DATE
+) RETURN NUMBER IS
+    age NUMBER;
+BEGIN
+    age := FLOOR(MONTHS_BETWEEN(SYSDATE, dob) / 12);
+    RETURN age;
+END;
+/
+
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Age: ' || CalculateAge(TO_DATE('1990-06-25', 'YYYY-MM-DD')));
+END;

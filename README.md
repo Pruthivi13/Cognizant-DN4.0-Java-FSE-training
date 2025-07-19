@@ -1,5 +1,4 @@
 # Cognizant DN4.0 Java FSE Training
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Pruthivi13/Cognizant-DN4.0-Java-FSE-training)
 
 This repository contains all the hands-on exercises, projects, and solutions developed during the Cognizant Digital Nurture 4.0 program for Java Full-Stack Engineering. The training covers a wide range of topics, from core Java concepts and PL/SQL to modern microservices architectures with Spring Boot and Spring Cloud.
 

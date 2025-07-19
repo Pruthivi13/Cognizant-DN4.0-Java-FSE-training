@@ -1,113 +1,140 @@
-# # Cognizant DN4.0 Java FSE Training
+# Cognizant DN4.0 Java FSE Training
+[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Pruthivi13/Cognizant-DN4.0-Java-FSE-training)
 
-This repository contains all the hands-on exercises, projects, and solutions developed during the Cognizant Digital Nurture 4.0 program for Java Full-Stack Engineering. The training covers fundamental and advanced topics in Java, from data structures to modern Spring Boot applications.
+This repository contains all the hands-on exercises, projects, and solutions developed during the Cognizant Digital Nurture 4.0 program for Java Full-Stack Engineering. The training covers a wide range of topics, from core Java concepts and PL/SQL to modern microservices architectures with Spring Boot and Spring Cloud.
 
-## Repository Structure
+## Repository Content Overview
 
-The projects are organized into weekly directories, reflecting the structure of the training program.
+The repository is structured chronologically by week, covering the following key areas:
 
--   **`Week 1- Algoritms and Data Structures/`**: Contains foundational exercises on common data structures and algorithms.
--   **`week 1/Week 1- Design Patterns and Principles/`**: Includes implementations of various creational, structural, and behavioral design patterns.
--   **`Week 3/`**: Focuses on the Spring Framework, including Core concepts, AOP, Data JPA, and Spring Boot.
+*   **Week 1:** Foundational concepts including Data Structures, Algorithms, and core Software Design Patterns.
+*   **Week 2:** Database programming with PL/SQL and Test-Driven Development (TDD) using JUnit 5 and Mockito.
+*   **Week 3:** In-depth exploration of the Spring Framework, covering Spring Core (IoC, DI), AOP, Spring Data JPA, and building RESTful services with Spring Boot.
+*   **Week 4:** Building secure REST APIs with Spring Security and JWT (JSON Web Tokens).
+*   **Week 5:** Designing and implementing a microservices-based system using Spring Cloud, including a service registry (Eureka) and an API Gateway.
 
-## Key Concepts and Projects
+## Key Projects and Concepts
 
-This repository provides practical examples of the following topics:
+### Week 1: Data Structures, Algorithms & Design Patterns
 
-### Week 1: Data Structures and Algorithms
+This week focuses on the fundamentals of computer science and software design.
 
-A series of small, focused projects demonstrating core data structures and algorithms.
+#### Data Structures & Algorithms
 
-| Project                      | Description                                                                               | Key Concepts                               |
-| ---------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------ |
-| **EcommerceSearchSystem**      | Implements and compares search algorithms for a product catalog.                          | Linear Search, Binary Search               |
-| **EmployeeManagementSystem**   | A system for managing employee records using a fixed-size array.                          | Array-based CRUD operations, traversal     |
-| **FinancialForecasting**       | A tool to predict future value using recursion.                                           | Recursion, Tail Recursion Optimization     |
-| **InventoryManagementSystem**  | A simple inventory system for adding, updating, and deleting products.                    | `HashMap` for efficient lookups            |
-| **LibraryManagementSystem**    | A library system to search for books by title.                                            | Linear Search, Binary Search               |
-| **OrderSortingSystem**         | Compares the performance and implementation of different sorting algorithms for orders.   | Bubble Sort, Quick Sort                    |
-| **TaskManagementSystem**       | A to-do list application to manage tasks.                                                 | Singly Linked List (add, search, delete)   |
+A series of projects demonstrating core data structures and their associated algorithms.
 
-### Week 1: Design Patterns
+| Project | Description | Key Concepts |
+|---|---|---|
+| **InventoryManagementSystem** | A simple inventory system for adding, updating, and deleting products. | `HashMap` for efficient O(1) lookups. |
+| **EmployeeManagementSystem** | A system for managing employee records using a fixed-size array. | Array-based CRUD operations, traversal. |
+| **TaskManagementSystem** | A to-do list application to manage tasks using a custom linked list. | Singly Linked List (add, search, delete). |
+| **LibraryManagementSystem** | Compares linear and binary search for finding books in a collection. | Linear Search, Binary Search (requires sorting). |
+| **OrderSortingSystem** | Implements and compares different sorting algorithms for e-commerce orders. | Bubble Sort, Quick Sort. |
+| **FinancialForecasting** | A tool to predict future investment value using a recursive approach. | Recursion for predictive modeling. |
+
+#### Design Patterns
 
 Implementations of common software design patterns in Java.
 
--   **Singleton**: `Logger.java` ensures only one instance of the logger is created.
--   **Factory Method**: `DocumentFactory` and its subclasses create different types of documents (`Word`, `PDF`, `Excel`).
--   **Builder**: `Computer.java` provides a fluent API for constructing complex `Computer` objects.
--   **Adapter**: `PayPalAdapter` and `StripeAdapter` unify different payment gateway APIs under a common `PaymentProcessor` interface.
--   **Decorator**: `NotifierDecorator` and its subclasses dynamically add notification channels (SMS, Slack) to a base email notifier.
--   **Proxy**: `ProxyImage` provides a surrogate for `RealImage` to control access and implement lazy loading.
--   **Strategy**: `PaymentContext` uses different payment strategies (`CreditCardPayment`, `PayPalPayment`) interchangeably.
--   **Observer**: `StockMarket` (subject) notifies multiple observers (`MobileApp`, `WebApp`) of price changes.
--   **Command**: `RemoteControl` encapsulates requests (`LightOnCommand`, `LightOffCommand`) as objects.
--   **MVC (Model-View-Controller)**: A simple `Student` application separating data (Model), presentation (View), and logic (Controller).
--   **Dependency Injection**: `CustomerService` receives its `CustomerRepository` dependency via its constructor, promoting loose coupling.
+*   **Singleton:** `Logger.java` ensures only one instance of the logger is created across the application.
+*   **Factory Method:** `DocumentFactory` provides an interface for creating `Document` objects, with concrete factories (`WordDocumentFactory`, `PdfDocumentFactory`) deciding which class to instantiate.
+*   **Adapter:** The `PayPalAdapter` and `StripeAdapter` allow incompatible payment gateway APIs to work together under a common `PaymentProcessor` interface.
+*   **Decorator:** `NotifierDecorator` subclasses (e.g., `SMSNotifierDecorator`) dynamically add new functionalities (notification channels) to a base `EmailNotifier` object.
+*   **Strategy:** `PaymentContext` uses different payment strategies (`CreditCardPayment`, `PayPalPayment`) interchangeably to process payments.
+*   **Observer:** The `StockMarket` (subject) notifies multiple observers (`MobileApp`, `WebApp`) of state changes (stock price updates).
+*   **Builder:** A fluent API for constructing complex `Computer` objects step-by-step, separating construction from representation.
+*   **Proxy:** `ProxyImage` acts as a surrogate for `RealImage`, controlling access and implementing lazy loading of images from a remote server.
+*   **Command:** Encapsulates requests (`LightOnCommand`, `LightOffCommand`) as objects, allowing for parameterization and queuing of requests.
+*   **MVC (Model-View-Controller):** A simple `Student` application separating data (Model), presentation (View), and user input logic (Controller).
+*   **Dependency Injection:** `CustomerService` receives its `CustomerRepository` dependency via its constructor, promoting loose coupling and testability.
 
-### Week 3: Spring Framework, Data JPA, and Spring Boot
+### Week 2: PL/SQL and TDD
 
-Advanced projects using the Spring ecosystem for building enterprise-grade applications.
+This week introduces database scripting and modern testing practices.
 
-#### `orm-learn`
+*   **PL/SQL:** A series of SQL scripts (`.sql` files) covering procedures, functions, triggers, cursors, and packages for performing database operations like interest calculation, data validation, and auditing.
+*   **TDD with JUnit & Mockito:** Maven-based projects demonstrating unit testing principles. This includes basic assertions, test lifecycle management (`@Before`, `@After`), parameterized tests with `@ValueSource`, and extensive use of Mockito to mock dependencies in service-layer tests.
 
-A comprehensive Spring Boot application demonstrating Spring Data JPA and Hibernate for database operations. It connects to a MySQL database to perform various queries and manage complex entity relationships.
+### Week 3 & 4: Spring, Spring Boot & Security
 
-**Features:**
--   **Basic CRUD**: Demonstrates standard repository operations.
--   **Custom Queries**: Uses `@Query` annotation and JPA query methods to fetch `Country` and `Stock` data based on specific criteria (e.g., `findByNameContaining`, `findByCodeAndDateBetween`).
--   **Entity Relationships**: Models and manages many-to-one (`Employee` to `Department`) and many-to-many (`Employee` to `Skill`) relationships.
--   **Criteria API**: Implements a `ProductService` that uses the JPA Criteria API for building dynamic, type-safe queries for filtering products based on multiple criteria.
--   **Test Runner**: A `CommandLineRunner` (`TestRunner.java`) executes all the test cases on application startup to demonstrate the implemented features.
+This section covers building robust, data-driven web applications using the Spring ecosystem.
 
-#### `LibraryManagement`
+#### `orm-learn` (Spring Data JPA)
 
-A simple, non-web Spring application that illustrates core Spring concepts.
+A console-based Spring Boot application demonstrating powerful database operations with Spring Data JPA.
 
-**Features:**
--   **Inversion of Control (IoC)**: The Spring container manages the lifecycle of beans.
--   **Dependency Injection**: Demonstrates both **Constructor Injection** and **Setter Injection** in `BookService`.
--   **Aspect-Oriented Programming (AOP)**: A `LoggingAspect` is used to log method calls in the service layer before and after their execution, separating logging from business logic.
+*   **Repository Queries:** Implements custom queries using both JPA method names (e.g., `findByNameContaining`) and the `@Query` annotation.
+*   **Data Retrieval:** Fetches and filters `Stock` and `Country` data from a MySQL database based on various criteria.
+*   **Entity Relationships:** Manages many-to-one (`Employee` to `Department`) and many-to-many (`Employee` to `Skill`) relationships.
+*   **Dynamic Queries:** Uses the JPA Criteria API in `ProductService` to build type-safe queries for filtering products.
 
-#### `springboot-demo`
+#### `spring-learn` (Spring REST & Security)
 
-A simple RESTful web service built with Spring Boot.
+A Spring Boot project demonstrating the creation of RESTful web services with security.
 
-**Features:**
--   **REST API**: Exposes CRUD endpoints (`GET`, `POST`, `PUT`, `DELETE`) for managing `Book` entities.
--   **Spring Data JPA**: Uses `JpaRepository` for data persistence.
--   **In-Memory Database**: Configured to use an H2 in-memory database, which is ideal for development and testing.
--   **H2 Console**: The H2 database console is enabled for easy database inspection during development.
+*   **REST Controllers:** Exposes endpoints for `Country`, `Employee`, and `Department` data.
+*   **XML Configuration:** Demonstrates loading Spring beans from XML files (`country.xml`, `employee.xml`) using `ClassPathXmlApplicationContext`.
+*   **Exception Handling:** Implements a custom `CountryNotFoundException` and returns a structured 404 response.
+*   **JWT Security:** Secures the API using Spring Security and JSON Web Tokens.
+    *   `AuthenticationController`: Generates a JWT upon successful basic authentication.
+    *   `JwtAuthorizationFilter`: A custom filter that validates the JWT from the `Authorization` header on subsequent requests.
+    *   `SecurityConfig`: Configures public/private endpoints and wires the custom JWT filter into the security chain.
+
+### Week 5: Microservices with Spring Cloud
+
+This project demonstrates a complete microservices architecture.
+
+*   **`eureka-discovery-server`**: The service registry where all microservices register themselves. It acts as a phone book for the services.
+*   **`api-gateway`**: A single entry point for all client requests. It uses Spring Cloud Gateway to route requests to the appropriate microservice based on the path. It also includes a global `LogFilter` to log all incoming requests.
+*   **Microservices (`account-service`, `loan-service`, `greet-service`)**: Independent, deployable services that perform specific business functions. Each service is a Spring Boot application configured as a Eureka client to register with the discovery server.
 
 ## How to Run the Projects
 
-### Week 1 Projects (Core Java)
-These are standard Java projects.
-1.  Navigate to the specific project directory (e.g., `week 1/Week 1- Design Patterns and Principles/AdapterPatternExample/`).
-2.  Compile all `.java` files: `javac *.java`
-3.  Run the main class: `java Main`
+### Prerequisites
 
-### Week 3 Projects (Maven & Spring Boot)
-These projects require Java (17+) and Apache Maven.
+*   Java 17 or later
+*   Apache Maven
+*   A MySQL server (for the `orm-learn` project)
 
-#### `orm-learn`
-1.  **Database Setup**:
-    -   Ensure you have a MySQL server running.
-    -   Create a database named `ormlearn`. Spring Boot will create the tables based on the entity definitions.
-    -   Update the database URL, username, and password in `src/main/resources/application.properties`.
-2.  **Run the Application**:
-    -   Navigate to the `Week 3/orm-learn/` directory.
-    -   Run the application using the Maven wrapper: `./mvnw spring-boot:run` (on Linux/macOS) or `mvnw.cmd spring-boot:run` (on Windows).
-    -   The `TestRunner` will execute on startup and print the results of the various data access tests to the console.
+### Week 1: Core Java Projects
 
-#### `springboot-demo`
-1.  **Run the Application**:
-    -   Navigate to the `Week 3/springboot-demo/springboot-demo/` directory.
-    -   Run the application: `./mvnw spring-boot:run` or `mvnw.cmd spring-boot:run`.
-    -   The server will start on `http://localhost:8080`.
-    -   You can access the H2 console at `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:mem:librarydb`).
-    -   Use a tool like Postman or the provided `test-books.http` file to interact with the API endpoints.
+These are standard Java projects without external dependencies.
+1.  Navigate to a specific project directory (e.g., `week 1/Week 1- Design Patterns and Principles/AdapterPatternExample/`).
+2.  Compile the Java files: `javac *.java` or `javac */*.java` if files are in subpackages.
+3.  Run the main application class: `java Main` or `java <package>.Main`.
 
-#### `LibraryManagement`
-1.  **Run the Application**:
-    -   Navigate to the `Week 3/LibraryManagement/LibraryManagement/` directory.
-    -   Run the application using the Maven exec plugin: `mvn clean compile exec:java`.
+### Weeks 3, 4, 5: Spring Boot & Maven Projects
+
+All Spring projects use the Maven wrapper, which handles downloading the correct Maven version.
+
+#### Running a Standard Spring Boot Application (e.g., `springboot-demo`, `spring-learn`)
+
+1.  Navigate to the project's root directory (e.g., `Week 3/springboot-demo/springboot-demo/`).
+2.  Execute the Maven wrapper to run the application:
+    *   On macOS/Linux: `./mvnw spring-boot:run`
+    *   On Windows: `mvnw.cmd spring-boot:run`
+3.  The application will start on the port specified in its `application.properties` file (e.g., `http://localhost:8080`).
+
+#### Specific Project Instructions
+
+*   **`orm-learn`:**
+    1.  Ensure your MySQL server is running.
+    2.  Create a database named `ormlearn`.
+    3.  Update the database URL, username, and password in `Week 3/orm-learn/src/main/resources/application.properties`.
+    4.  Run the application. The `TestRunner` class will execute all the data access tests on startup and print results to the console.
+
+*   **`springboot-demo`:**
+    1.  This project uses an in-memory H2 database, so no external setup is needed.
+    2.  Once running, you can access the H2 console at `http://localhost:8080/h2-console` (use JDBC URL: `jdbc:h2:mem:librarydb`).
+    3.  Use an API client like Postman or the provided `test-books.http` file to interact with the `/books` endpoints.
+
+*   **`LibraryManagement` (Non-Web Application):**
+    1.  Navigate to `Week 3/LibraryManagement/LibraryManagement/`.
+    2.  Run the application using the Maven `exec` plugin: `mvn clean compile exec:java`.
+
+*   **Microservices Project (Week 5):**
+    1.  Start the services in the following order:
+        *   `eureka-discovery-server`
+        *   `api-gateway`
+        *   `account-service`, `loan-service`, `greet-service` (order doesn't matter for these)
+    2.  Once all services are running, you can access them through the API Gateway at `http://localhost:9090`. For example, a request to `http://localhost:9090/greet-service/greet` will be routed to the greet service.

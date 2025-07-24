@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.column {
+  padding: 0 20px;
+  min-width: 200px;
+}
+
+.divider {
+  border-left: 2px solid green;
+}

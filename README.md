@@ -159,7 +159,6 @@ This directory contains the code assignments and exercises for **Week 6** of the
 
 Week 6/ ├── src/ │   ├── main/ │   │   ├── java/ │   │   │   └── com/example/...     # Java packages (controllers, services, models, repos) │   │   └── resources/ │   │       └── application.properties  # App config │   └── test/ │       └── java/                  # Unit and integration test classes ├── pom.xml / build.gradle         # Maven or Gradle build file └── README.md                      # This file
 
-> 🔧 Note: Update the package paths and class names as per your actual structure.
 
 
 ## ⚙️ Build & Run Instructions
@@ -257,3 +256,4 @@ Ensure correct DB configuration in application.properties
 Use H2 for in-memory testing or configure your own MySQL database
 
 Swagger or Postman Collection can be added for API.
+

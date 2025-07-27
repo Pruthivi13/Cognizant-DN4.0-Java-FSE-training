@@ -137,3 +137,123 @@ All Spring projects use the Maven wrapper, which handles downloading the correct
         *   `api-gateway`
         *   `account-service`, `loan-service`, `greet-service` (order doesn't matter for these)
     2.  Once all services are running, you can access them through the API Gateway at `http://localhost:9090`. For example, a request to `http://localhost:9090/greet-service/greet` will be routed to the greet service.
+
+# 🚀 Cognizant DN4.0 Java FSE – Week 6
+
+This directory contains the code assignments and exercises for **Week 6** of the **Cognizant DN4.0 Java Full-Stack Engineering Training Program**. The focus of this week is on building and testing **RESTful APIs using Spring Boot**, implementing **service and persistence layers**, and managing **exception handling** in a structured way.
+
+---
+
+## 📚 Topics Covered
+
+- ✅ Building RESTful APIs with Spring Boot
+- ✅ Creating Service and Repository layers
+- ✅ Handling exceptions using `@ControllerAdvice`
+- ✅ CRUD operations with Spring Data JPA
+- ✅ Testing with JUnit and Mockito
+- ✅ API response structure and HTTP status codes
+
+---
+
+## 📁 Project Structure
+
+Week 6/ ├── src/ │   ├── main/ │   │   ├── java/ │   │   │   └── com/example/...     # Java packages (controllers, services, models, repos) │   │   └── resources/ │   │       └── application.properties  # App config │   └── test/ │       └── java/                  # Unit and integration test classes ├── pom.xml / build.gradle         # Maven or Gradle build file └── README.md                      # This file
+
+> 🔧 Note: Update the package paths and class names as per your actual structure.
+
+
+## ⚙️ Build & Run Instructions
+
+### 1. Clone the repository
+`|bash
+git clone https://github.com/Pruthivi13/Cognizant-DN4.0-Java-FSE-training.git
+cd Cognizant-DN4.0-Java-FSE-training/Week\ 6
+
+2. Build the project
+
+Using Maven:
+
+./mvnw clean install
+
+Using Gradle:
+
+./gradlew clean build
+
+3. Run the application
+
+Using Maven:
+
+./mvnw spring-boot:run
+
+Using Gradle:
+
+./gradlew bootRun
+
+
+---
+
+🧪 Running Tests
+
+Using Maven:
+
+./mvnw test
+
+Using Gradle:
+
+./gradlew test
+
+
+---
+
+🔗 API Access
+
+Once the app is running, access your REST APIs at:
+
+http://localhost:8080/api/{resource}
+
+Use tools like Postman, cURL, or your browser to test endpoints.
+
+
+---
+
+✅ Key Features
+
+🔸 RESTful CRUD operations with proper routing
+
+🔸 Use of @RestController, @Service, and @Repository
+
+🔸 Exception handling with custom error messages and HTTP status codes
+
+🔸 Clean code with separation of concerns (MVC structure)
+
+🔸 Mock-based unit testing with JUnit and Mockito
+
+
+
+---
+
+🧰 Tech Stack
+
+Java 11+
+
+Spring Boot
+
+Spring Data JPA
+
+H2/MySQL (based on your configuration)
+
+JUnit 5, Mockito
+
+Maven / Gradle
+
+
+
+---
+
+📌 Notes
+
+Ensure correct DB configuration in application.properties
+
+Use H2 for in-memory testing or configure your own MySQL database
+
+Swagger or Postman Collection can be added for API.

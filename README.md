@@ -165,7 +165,7 @@ Week 6/ ├── src/ │   ├── main/ │   │   ├── java/ │   �
 ## ⚙️ Build & Run Instructions
 
 ### 1. Clone the repository
-`|bash
+```bash
 git clone https://github.com/Pruthivi13/Cognizant-DN4.0-Java-FSE-training.git
 cd Cognizant-DN4.0-Java-FSE-training/Week\ 6
 

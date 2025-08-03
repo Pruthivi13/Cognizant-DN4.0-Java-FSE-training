@@ -244,6 +244,7 @@ H2/MySQL (based on your configuration)
 JUnit 5, Mockito
 
 Maven / Gradle
+```
 
 # 🚀 Cognizant DN4.0 Java FSE – Week 7
 

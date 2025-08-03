@@ -245,15 +245,163 @@ JUnit 5, Mockito
 
 Maven / Gradle
 
+# 🚀 Cognizant DN4.0 Java FSE – Week 7
+
+This directory contains assignments and practice code for **Week 7** of the **Cognizant DN4.0 Java Full-Stack Engineering Training Program**. This week's focus is on **building Spring Boot REST APIs with advanced exception handling**, **unit testing**, and **layered architecture best practices**.
+
+---
+
+## 📚 Topics Covered
+
+- ✅ REST API development using Spring Boot
+- ✅ Global and custom exception handling with `@ControllerAdvice`
+- ✅ CRUD operations via `@RestController`
+- ✅ Service and repository layer implementation
+- ✅ Unit testing with JUnit 5 and Mockito
+- ✅ Layered architecture (Controller → Service → Repository)
+
+---
+
+## 📁 Project Structure
+
+
+
+Week 7/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/...     # Controllers, services, models, exceptions, repositories
+│   │   └── resources/
+│   │       └── application.properties  # App configuration
+│   └── test/
+│       └── java/                      # Unit test classes
+├── pom.xml / build.gradle             # Maven or Gradle build file
+└── README.md                          # This file
+
+`
+
+> 🔍 Make sure to update package names and paths based on your codebase.
+
+---
+
+## ⚙ Build & Run Instructions
+
+### 1. Clone the repository
+bash
+git clone https://github.com/Pruthivi13/Cognizant-DN4.0-Java-FSE-training.git
+cd Cognizant-DN4.0-Java-FSE-training/Week\ 7
+`
+
+### 2. Build the project
+
+#### Using Maven:
+
+bash
+./mvnw clean install
+
+
+#### Using Gradle:
+
+bash
+./gradlew clean build
+
+### 3. Run the application
+
+#### Using Maven:
+
+bash
+./mvnw spring-boot:run
+
+
+#### Using Gradle:
+
+bash
+./gradlew bootRun
 
 
 ---
 
-📌 Notes
+## 🔗 API Access
 
-Ensure correct DB configuration in application.properties
+Access REST endpoints at:
 
-Use H2 for in-memory testing or configure your own MySQL database
 
-Swagger or Postman Collection can be added for API.
+http://localhost:8080/api/{resource}
+
+
+> Use **Postman** or **curl** to test your endpoints.
+
+---
+## ✅ Key Features
+
+* 🔸 RESTful endpoints mapped with `@RestController`
+* 🔸 Proper use of HTTP methods (GET, POST, PUT, DELETE)
+* 🔸 Service layer handles business logic cleanly
+* 🔸 Repository layer abstracts data persistence
+* 🔸 Custom exceptions and centralized error responses via `@ControllerAdvice`
+* 🔸 Unit testing with mocked dependencies using **Mockito**
+
+---
+
+## 🧪 Testing Instructions
+
+### Run Tests with:
+
+#### Maven:
+
+bash
+./mvnw test
+
+
+#### Gradle:
+bash
+./gradlew test
+
+
+* ✅ Tests for service methods and controller endpoints
+* ✅ Validation of exception scenarios
+
+---
+
+## 🧰 Tech Stack
+
+* **Java 11+**
+* **Spring Boot**
+* **Spring Data JPA**
+* **JUnit 5**
+* **Mockito**
+* **H2 / MySQL**
+* **Maven / Gradle**
+
+---
+
+# 🚀 Cognizant DN4.0 Java FSE – Week 8
+
+## Overview
+
+The files within this directory are used to demonstrate various Git operations, including branching, merging, and handling merge conflicts.
+
+## Directory Structure
+
+
+Week 8/
+├── Output/
+└── git/
+    ├── branchFile.txt
+    ├── hello.xml
+    ├── hello.xml.orig
+    ├── welcome.txt
+    └── log/
+        └── info.txt
+
+
+### File Descriptions
+
+*   **git/**: The primary working directory for the Git exercises.
+*   **git/hello.xml**: The final version of an XML file after a merge.
+*   **git/hello.xml.orig**: A backup file automatically created by Git during a merge conflict resolution. It shows the original state of the conflict between the master and GitWork branches.
+*   **git/branchFile.txt**: A text file added specifically in a new branch named GitNewBranch to demonstrate branching workflows.
+*   **git/welcome.txt**: A simple text file under version control.
+*   **git/log/info.txt**: A file inside a subdirectory to show how Git tracks nested file structures.
+*   **Output/**: An empty directory, likely intended for storing outputs from Git commands.
 
